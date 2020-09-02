@@ -13,7 +13,8 @@ struct Payload {
     let text : String
     let beaconId: String
     let deviceId: String
-    var timestamp: Timestamp!
+//        uncomment This when further along
+//    var timestamp: Timestamp!
     
     var user: User?
     
@@ -23,9 +24,10 @@ struct Payload {
         self.text = dictionary["text"] as? String ?? ""
         self.beaconId = dictionary["beaconId"] as? String ?? ""
         self.deviceId = dictionary["deviceId"] as? String ?? ""
-        self.timestamp = Timestamp!
+//        uncomment This when further along
+//        self.timestamp = Timestamp!
         
-        self.isFromCurrentUser = fromId == Auth.auth().currentUser?.uid
+        self.isFromCurrentUser = deviceId == Auth.auth().currentUser?.uid
     }
 }
 
