@@ -25,7 +25,7 @@ struct User {
         self.email = dictionary["email"] as? String ?? ""
         self.beacons = dictionary["beacons"] as? Array ?? [""]
         
-        
+    
         //CHANGE THIS BEFORE PROCEEDING
         return
         
