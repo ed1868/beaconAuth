@@ -99,6 +99,12 @@
 		528F7FEF24FF4B1200006C6D /* ZoneRv1 */ = {
 			isa = PBXGroup;
 			children = (
+				528F802524FF4E4600006C6D /* ViewModel */,
+				528F802424FF4E4100006C6D /* Utils */,
+				528F802324FF4E2000006C6D /* Models */,
+				528F802224FF4E1100006C6D /* Controllers */,
+				528F802124FF4E0A00006C6D /* Views */,
+				528F802024FF4E0400006C6D /* API */,
 				528F7FF024FF4B1200006C6D /* AppDelegate.swift */,
 				528F7FF224FF4B1200006C6D /* SceneDelegate.swift */,
 				528F7FF424FF4B1200006C6D /* ViewController.swift */,
@@ -126,6 +132,48 @@
 				528F801424FF4B1800006C6D /* Info.plist */,
 			);
 			path = ZoneRv1UITests;
+			sourceTree = "<group>";
+		};
+		528F802024FF4E0400006C6D /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		528F802124FF4E0A00006C6D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		528F802224FF4E1100006C6D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		528F802324FF4E2000006C6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		528F802424FF4E4100006C6D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		528F802524FF4E4600006C6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
