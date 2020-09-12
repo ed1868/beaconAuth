@@ -67,7 +67,7 @@ struct Service {
                 
                 let message = Payload(dictionary: dictionary)
                 self.fetchUser(withUid: message.beaconId) { user in
-                      let conversation = Payload(user: user, DataPackage: message)
+                    let conversation = Payload(dictionary: user )
                     
                     conversations.append(conversation)
                     completion(conversations)
@@ -80,7 +80,7 @@ struct Service {
         
     }
     
-    static func fetchMessages(forUser user: User, completion: @escaping([Message]) -> Void) {
+    static func fetchMessages(forUser user: User, completion: @escaping([Payload]) -> Void) {
         var messages = [Message]()
         
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
