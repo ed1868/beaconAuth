@@ -67,10 +67,10 @@ struct Service {
                 
                 let message = Payload(dictionary: dictionary)
                 self.fetchUser(withUid: message.beaconId) { user in
-                    let conversation = Payload(dictionary: user )
-                    
-                    conversations.append(conversation)
-                    completion(conversations)
+//                    let conversation = Payload(dictionary: user )
+//                    
+//                    conversations.append(conversation)
+//                    completion(conversations)
                 }
                 
             })
@@ -81,7 +81,7 @@ struct Service {
     }
     
     static func fetchMessages(forUser user: User, completion: @escaping([Payload]) -> Void) {
-        var messages = [Message]()
+        var messages = [Payload]()
         
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         
@@ -92,7 +92,7 @@ struct Service {
             snapshot?.documentChanges.forEach({ change in
                 if change.type == .added {
                     let dictionary = change.document.data()
-                    messages.append(Message(dictionary: dictionary))
+                    messages.append(Payload(dictionary: dictionary))
                     
                     completion(messages)
                 }

@@ -10,6 +10,11 @@
 		52254A65250C50D100A6683D /* PayloadsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52254A64250C50D100A6683D /* PayloadsViewModel.swift */; };
 		52254A67250C532B00A6683D /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52254A66250C532B00A6683D /* RegistrationViewModel.swift */; };
 		52254A6A250C5FFA00A6683D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52254A69250C5FFA00A6683D /* LoginViewModel.swift */; };
+		523F51D0251901B60074CC49 /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F51CF251901B60074CC49 /* InputContainerView.swift */; };
+		523F51D62519023C0074CC49 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F51D52519023C0074CC49 /* LoginController.swift */; };
+		523F51DB251902480074CC49 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F51DA251902480074CC49 /* RegistrationController.swift */; };
+		523F51E0251916590074CC49 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F51DF251916590074CC49 /* CustomTextField.swift */; };
+		523F51E52519187A0074CC49 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F51E42519187A0074CC49 /* Extensions.swift */; };
 		528F7FF124FF4B1200006C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FF024FF4B1200006C6D /* AppDelegate.swift */; };
 		528F7FF324FF4B1200006C6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FF224FF4B1200006C6D /* SceneDelegate.swift */; };
 		528F7FF524FF4B1200006C6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F7FF424FF4B1200006C6D /* ViewController.swift */; };
@@ -52,6 +57,11 @@
 		52254A64250C50D100A6683D /* PayloadsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadsViewModel.swift; sourceTree = "<group>"; };
 		52254A66250C532B00A6683D /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		52254A69250C5FFA00A6683D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		523F51CF251901B60074CC49 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
+		523F51D52519023C0074CC49 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		523F51DA251902480074CC49 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		523F51DF251916590074CC49 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		523F51E42519187A0074CC49 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		528F7FED24FF4B1200006C6D /* ZoneRv1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoneRv1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528F7FF024FF4B1200006C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		528F7FF224FF4B1200006C6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +124,15 @@
 			children = (
 				52254A66250C532B00A6683D /* RegistrationViewModel.swift */,
 				52254A69250C5FFA00A6683D /* LoginViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		523F51D42519022A0074CC49 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				523F51D52519023C0074CC49 /* LoginController.swift */,
+				523F51DA251902480074CC49 /* RegistrationController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -191,6 +210,8 @@
 		528F802124FF4E0A00006C6D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				523F51CF251901B60074CC49 /* InputContainerView.swift */,
+				523F51DF251916590074CC49 /* CustomTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +219,7 @@
 		528F802224FF4E1100006C6D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				523F51D42519022A0074CC49 /* Authentication */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				528F803024FF6F5E00006C6D /* Constants.swift */,
+				523F51E42519187A0074CC49 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -491,17 +514,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523F51DB251902480074CC49 /* RegistrationController.swift in Sources */,
 				528F802724FF4F0E00006C6D /* User.swift in Sources */,
+				523F51D0251901B60074CC49 /* InputContainerView.swift in Sources */,
 				528F802F24FF658D00006C6D /* Service.swift in Sources */,
+				523F51D62519023C0074CC49 /* LoginController.swift in Sources */,
 				52254A6A250C5FFA00A6683D /* LoginViewModel.swift in Sources */,
 				528F802924FF4F5000006C6D /* Payloads.swift in Sources */,
 				528F7FF524FF4B1200006C6D /* ViewController.swift in Sources */,
 				528F802D24FF658200006C6D /* AuthService.swift in Sources */,
 				52254A67250C532B00A6683D /* RegistrationViewModel.swift in Sources */,
 				528F7FF124FF4B1200006C6D /* AppDelegate.swift in Sources */,
+				523F51E52519187A0074CC49 /* Extensions.swift in Sources */,
 				528F7FF324FF4B1200006C6D /* SceneDelegate.swift in Sources */,
 				528F803124FF6F5E00006C6D /* Constants.swift in Sources */,
 				52254A65250C50D100A6683D /* PayloadsViewModel.swift in Sources */,
+				523F51E0251916590074CC49 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
