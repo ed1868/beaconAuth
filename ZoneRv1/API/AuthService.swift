@@ -14,7 +14,11 @@ struct registrationCredentials {
     let username : String
     let fullname : String
     let profileImage : UIImage
+    let beaconId : String
+    let beaconPromotion : String
+    
 }
+
 
 struct AuthService{
     static let shared = AuthService()
@@ -27,11 +31,12 @@ struct AuthService{
     
     func createUser(credentials : registrationCredentials , completion: ((Error?) -> Void)?) {
         guard let imageData = credentials.profileImage.jpegData(compressionQuality: 0.3) else { return }
-        
+        print("ENTROOOOOO")
+        print("----image data--- \(imageData)")
         let filename = NSUUID().uuidString
         let ref = Storage.storage().reference(withPath: "/profile_images/\(filename)")
         
-        
+        print("----:D :D---")
         ref.putData(imageData, metadata: nil){ (meta,error) in
             if let error = error {
                 print("DEBUG: FAILED TO UPLOAD IMAGE WITH ERROR \(error.localizedDescription)")
@@ -42,15 +47,15 @@ struct AuthService{
                 
                 
                  // WE HAVE TO CREATE USER
-                
-                Auth.auth().createUser(withEmail: credentials.email, password: credentials.password) { (result, error) in
+                let elPassword = "eddie123456"
+                Auth.auth().createUser(withEmail: credentials.email, password: elPassword) { (result, error) in
                     if let error = error {
-                            print("DEBUG: FAILED TO CREATE USER WITH ERROR \(error.localizedDescription)")
+                            print("DEBUG: ERRRRROOOOORORRRRFAILED TO CREATE USER WITH ERROR \(error.localizedDescription)")
                     }
                     
                     guard let uid = result?.user.uid else { return }
                     
-
+                    print("----:D\(credentials) :D---")
 
                     let data = [ "email": credentials.email,
                                  "fullname": credentials.fullname,

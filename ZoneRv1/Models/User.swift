@@ -15,6 +15,7 @@ struct User {
     let fullname: String
     let email: String
     let beacons : Array<Any>
+    let promotion : String
     
     init(dictionary: [String: Any]){
         
@@ -24,6 +25,7 @@ struct User {
         self.fullname = dictionary["fullname"] as? String ?? ""
         self.email = dictionary["email"] as? String ?? ""
         self.beacons = dictionary["beacons"] as? Array ?? [""]
+        self.promotion = dictionary["promotion"] as? String ?? ""
         
     
         //CHANGE THIS BEFORE PROCEEDING

@@ -32,7 +32,7 @@ class LoginController: UIViewController {
 //        var chatImageView = UIImageView(image: chat)
         
         
-        iv.image = UIImage(named: "zoner")
+        iv.image = UIImage(named: "zonezone")
         iv.tintColor = .white
         
         return iv
@@ -67,7 +67,8 @@ class LoginController: UIViewController {
         button.setTitle("Log In", for: .normal)
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.backgroundColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
+//        button.backgroundColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         button.setTitleColor(.white, for: .normal)
         button.isEnabled = false
         
@@ -85,17 +86,17 @@ class LoginController: UIViewController {
         let attributedTitle = NSMutableAttributedString(string: "Dont have an account? ", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.white])
         
 //          SIGN UP SECTION
-//        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.white]))
-//        button.addTarget(self, action: #selector(handleShowSignup), for: .touchUpInside)
+        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.white]))
+        button.addTarget(self, action: #selector(handleShowSignup), for: .touchUpInside)
         
         
         // AI CONTACT SECTION
         
-        attributedTitle.append(NSAttributedString(string: "Contact AI Nomads", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.white]))
-//
+//        attributedTitle.append(NSAttributedString(string: "Contact AI Nomads", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.white]))
+////
         button.setAttributedTitle(attributedTitle, for: .normal)
-//
-        button.addTarget(self, action: #selector(handleAppleContact), for: .touchUpInside)
+////
+//        button.addTarget(self, action: #selector(handleAppleContact), for: .touchUpInside)
         return button
     }()
     

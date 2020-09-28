@@ -19,6 +19,7 @@ struct RegistrationViewModel: AuthenticationProtocol {
     var secret: String?
     
     var beaconId : String?
+    var beaconMessage : String?
     
     var formIsValid: Bool {
         return email?.isEmpty == false
@@ -26,6 +27,8 @@ struct RegistrationViewModel: AuthenticationProtocol {
             && fullname?.isEmpty == false
             && username?.isEmpty == false
             && beaconId?.isEmpty == false
+            && beaconId?.isEmpty == false
+            && beaconMessage?.isEmpty == false
         
     }
 }

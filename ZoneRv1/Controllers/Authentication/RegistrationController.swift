@@ -32,7 +32,8 @@ class RegistrationController: UIViewController {
     private let emailTextField = CustomTextField(placeholder: "Email")
     private let usernameTextField = CustomTextField(placeholder: "Username")
     private let fullnameTextField = CustomTextField(placeholder: "Full Name")
-  
+    private let beaconIdTextField = CustomTextField(placeholder: "Beacon ID")
+    private let beaconMessageTextField = CustomTextField(placeholder: "Promotion")
     
     private lazy var fullNameContainerView: UIView = {
         return InputContainerView(image: UIImage(systemName: "envelope"), textField:fullnameTextField)
@@ -46,7 +47,13 @@ class RegistrationController: UIViewController {
         return InputContainerView(image: UIImage(systemName: "envelope"), textField:emailTextField)
     }()
     
-
+    private lazy var beaconIdContainerView: UIView = {
+        return InputContainerView(image: UIImage(systemName: "envelope"), textField:beaconIdTextField)
+    }()
+    private lazy var beaconMessageContainerView: UIView = {
+        return InputContainerView(image: UIImage(systemName: "envelope"), textField:beaconMessageTextField)
+    }()
+    
     private let passwordTextField: UITextField = {
        let tf = CustomTextField(placeholder: "Password")
         
@@ -129,6 +136,13 @@ class RegistrationController: UIViewController {
             
             viewModel.username = sender.text
             
+        case beaconIdTextField:
+            
+            viewModel.beaconId = sender.text
+            
+        case beaconMessageTextField :
+            
+            viewModel.beaconMessage = sender.text
     
         default:
             print("Que paso tio?")
@@ -163,15 +177,28 @@ class RegistrationController: UIViewController {
     
     @objc func handleSignUp(){
         print("YOU HAVE ENTERED THE HANDLE SIGN UP ALGORITHM")
+        print("what up")
         guard let email = emailTextField.text else { return }
+        print("-----EMAIL\(email)-------")
         guard let username = usernameTextField.text?.lowercased() else { return }
+        print("-----USERNAME\(username)-------")
         guard let password = passwordTextField.text else { return }
+        print("-----PASSWORD\(password)-------")
         guard let fullname = fullnameTextField.text else { return }
+        print("-----FULLNAME\(fullname)-------")
+        guard let beaconId = beaconIdTextField.text else { return }
+        print("-----BEACONID\(beaconId)-------")
         
+        
+        guard let beaconPromotion = beaconMessageTextField.text else { return }
+        print("-----PROMOTION\(beaconPromotion)-------")
         guard let profileImage = profileImage else { return }
+        print("-----PROFILE IMAGE\(profileImage)-------")
+        let credentials = registrationCredentials(email: email, password: password, username: username, fullname: fullname,profileImage: profileImage, beaconId: beaconId, beaconPromotion: beaconPromotion)
         
-        let credentials = registrationCredentials(email: email, password: password, username: username, fullname: fullname, profileImage: profileImage)
-        showLoader(true, withText: "Signing you up to Dudes Hanging Out")
+        print("los credentials \(credentials)")
+        
+        showLoader(true, withText: "Creating your zone..")
         
         AuthService.shared.createUser(credentials: credentials) { error in
             if let error = error {
@@ -204,6 +231,7 @@ class RegistrationController: UIViewController {
                plusPhotoButton.centerX(inView: view)
                plusPhotoButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
                plusPhotoButton.setDimensions(height: 120, width: 120)
+      
         
         
         
@@ -212,6 +240,8 @@ class RegistrationController: UIViewController {
                                                    usernameContainerView,
                                                     fullNameContainerView,
                                                      passwordContainerView,
+                                                     beaconIdContainerView,
+                                                     beaconMessageContainerView,
                                                      signUpButton
                                                     ])
 
@@ -238,6 +268,8 @@ class RegistrationController: UIViewController {
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         fullnameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         usernameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        beaconIdTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        beaconMessageTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
