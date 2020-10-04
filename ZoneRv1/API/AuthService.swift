@@ -61,7 +61,9 @@ struct AuthService{
                                  "fullname": credentials.fullname,
                                  "profileImageUrl": profileImageUrl,
                                  "uid": uid,
-                                 "username": credentials.username
+                                 "username": credentials.username,
+                                 "beaconID": credentials.beaconId,
+                                 "beaconPromotion": credentials.beaconPromotion
                     ] as [String: Any]
                     
                     // WE HAVE TO UPLOAD THE USER DATA TO DB

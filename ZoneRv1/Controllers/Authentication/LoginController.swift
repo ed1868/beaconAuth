@@ -127,8 +127,16 @@ class LoginController: UIViewController {
                                 return
                             }
                             print("DEBUG: LOG IN SUCCESFULL")
-                            self.showLoader(false)
-                            self.dismiss(animated: true, completion: nil)
+            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeController
+            else {return}
+            
+            self.showLoader(false)
+            controller.configureUI()
+            
+   
+            self.dismiss(animated: true, completion: nil)
+                          
+                            
                         }
     }
     

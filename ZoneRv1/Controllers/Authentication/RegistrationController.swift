@@ -36,11 +36,11 @@ class RegistrationController: UIViewController {
     private let beaconMessageTextField = CustomTextField(placeholder: "Promotion")
     
     private lazy var fullNameContainerView: UIView = {
-        return InputContainerView(image: UIImage(systemName: "envelope"), textField:fullnameTextField)
+        return InputContainerView(image: UIImage(systemName: "person.circle"), textField:fullnameTextField)
     }()
     
     private lazy var usernameContainerView: UIView = {
-        return InputContainerView(image: UIImage(systemName: "envelope"), textField:usernameTextField)
+        return InputContainerView(image: UIImage(systemName: "person.circle"), textField:usernameTextField)
     }()
     
     private lazy var emailContainerView: UIView = {
@@ -48,10 +48,10 @@ class RegistrationController: UIViewController {
     }()
     
     private lazy var beaconIdContainerView: UIView = {
-        return InputContainerView(image: UIImage(systemName: "envelope"), textField:beaconIdTextField)
+        return InputContainerView(image: UIImage(systemName: "globe"), textField:beaconIdTextField)
     }()
     private lazy var beaconMessageContainerView: UIView = {
-        return InputContainerView(image: UIImage(systemName: "envelope"), textField:beaconMessageTextField)
+        return InputContainerView(image: UIImage(systemName: "cart"), textField:beaconMessageTextField)
     }()
     
     private let passwordTextField: UITextField = {
@@ -88,7 +88,7 @@ class RegistrationController: UIViewController {
         button.setTitle("Sign Up", for: .normal)
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.backgroundColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         button.setTitleColor(.white, for: .normal)
         button.isEnabled = false
         button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
@@ -208,7 +208,11 @@ class RegistrationController: UIViewController {
                                   }
                                   print("DEBUG: DID CREATE USER ...")
             self.showLoader(false)
-                                  self.dismiss(animated: true, completion: nil)
+            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeController
+            else {return}
+            self.dismiss(animated: true, completion: nil)
+                            controller.configureUI()
+                                  
                                   
                               }
         }
