@@ -41,6 +41,8 @@ class HomeController: UIViewController{
         print("checking if user is logged in ")
         
         if Auth.auth().currentUser?.uid == nil {
+            print("entro")
+            print("\(String(describing: Auth.auth().currentUser?.uid))")
             DispatchQueue.main.async {
                 let nav = UINavigationController(rootViewController: LoginController())
                 if #available(iOS 13.0, *) {

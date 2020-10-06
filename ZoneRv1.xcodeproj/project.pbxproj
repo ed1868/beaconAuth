@@ -30,6 +30,15 @@
 		528F802D24FF658200006C6D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F802C24FF658200006C6D /* AuthService.swift */; };
 		528F802F24FF658D00006C6D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F802E24FF658D00006C6D /* Service.swift */; };
 		528F803124FF6F5E00006C6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F803024FF6F5E00006C6D /* Constants.swift */; };
+		52CBAC29252C28B900934187 /* ATCClassicWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CBAC24252C28B900934187 /* ATCClassicWalkthroughViewController.xib */; };
+		52CBAC2A252C28B900934187 /* ATCWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBAC25252C28B900934187 /* ATCWalkthroughViewController.swift */; };
+		52CBAC2B252C28B900934187 /* ATCWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CBAC26252C28B900934187 /* ATCWalkthroughViewController.xib */; };
+		52CBAC2C252C28B900934187 /* ATCClassicWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBAC27252C28B900934187 /* ATCClassicWalkthroughViewController.swift */; };
+		52CBAC2D252C28B900934187 /* WalkthroughController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBAC28252C28B900934187 /* WalkthroughController.swift */; };
+		52CBAC32252C293E00934187 /* ATCWalkthroughModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBAC31252C293E00934187 /* ATCWalkthroughModel.swift */; };
+		52CBAC39252C29A000934187 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBAC36252C299F00934187 /* UIColor.swift */; };
+		52CBAC3A252C29A000934187 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBAC37252C29A000934187 /* UIImage.swift */; };
+		52CBAC3B252C29A000934187 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CBAC38252C29A000934187 /* UIViewController.swift */; };
 		679D90C15C92013B41419098 /* Pods_ZoneRv1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE000BA38E9FDBE91288648 /* Pods_ZoneRv1Tests.framework */; };
 		D40FC4AC6CCEA01E6E047717 /* Pods_ZoneRv1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA2DF50D02680D8EDDB30F /* Pods_ZoneRv1.framework */; };
 		F8CA0850EF0C1136DDF75E18 /* Pods_ZoneRv1_ZoneRv1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A657D0F2CFAF384BAD6F462 /* Pods_ZoneRv1_ZoneRv1UITests.framework */; };
@@ -84,6 +93,15 @@
 		528F802C24FF658200006C6D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		528F802E24FF658D00006C6D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		528F803024FF6F5E00006C6D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		52CBAC24252C28B900934187 /* ATCClassicWalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATCClassicWalkthroughViewController.xib; sourceTree = "<group>"; };
+		52CBAC25252C28B900934187 /* ATCWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCWalkthroughViewController.swift; sourceTree = "<group>"; };
+		52CBAC26252C28B900934187 /* ATCWalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATCWalkthroughViewController.xib; sourceTree = "<group>"; };
+		52CBAC27252C28B900934187 /* ATCClassicWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCClassicWalkthroughViewController.swift; sourceTree = "<group>"; };
+		52CBAC28252C28B900934187 /* WalkthroughController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughController.swift; sourceTree = "<group>"; };
+		52CBAC31252C293E00934187 /* ATCWalkthroughModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCWalkthroughModel.swift; sourceTree = "<group>"; };
+		52CBAC36252C299F00934187 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		52CBAC37252C29A000934187 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		52CBAC38252C29A000934187 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		5B0112827A2F998F5FBE6E4D /* Pods-ZoneRv1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoneRv1Tests.debug.xcconfig"; path = "Target Support Files/Pods-ZoneRv1Tests/Pods-ZoneRv1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DE000BA38E9FDBE91288648 /* Pods_ZoneRv1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoneRv1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A657D0F2CFAF384BAD6F462 /* Pods_ZoneRv1_ZoneRv1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoneRv1_ZoneRv1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +239,7 @@
 		528F802224FF4E1100006C6D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52CBAC23252C289800934187 /* Walkthrough */,
 				523F51D42519022A0074CC49 /* Authentication */,
 				5224D2CC252942AC00B6FE19 /* HomeController.swift */,
 			);
@@ -230,6 +249,7 @@
 		528F802324FF4E2000006C6D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				52CBAC31252C293E00934187 /* ATCWalkthroughModel.swift */,
 				528F802624FF4F0E00006C6D /* User.swift */,
 				528F802824FF4F5000006C6D /* Payloads.swift */,
 			);
@@ -239,6 +259,9 @@
 		528F802424FF4E4100006C6D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				52CBAC36252C299F00934187 /* UIColor.swift */,
+				52CBAC37252C29A000934187 /* UIImage.swift */,
+				52CBAC38252C29A000934187 /* UIViewController.swift */,
 				528F803024FF6F5E00006C6D /* Constants.swift */,
 				523F51E42519187A0074CC49 /* Extensions.swift */,
 			);
@@ -252,6 +275,18 @@
 				52254A64250C50D100A6683D /* PayloadsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52CBAC23252C289800934187 /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				52CBAC27252C28B900934187 /* ATCClassicWalkthroughViewController.swift */,
+				52CBAC24252C28B900934187 /* ATCClassicWalkthroughViewController.xib */,
+				52CBAC25252C28B900934187 /* ATCWalkthroughViewController.swift */,
+				52CBAC26252C28B900934187 /* ATCWalkthroughViewController.xib */,
+				52CBAC28252C28B900934187 /* WalkthroughController.swift */,
+			);
+			path = Walkthrough;
 			sourceTree = "<group>";
 		};
 		5E45E39F06AFA4417E4D3690 /* Frameworks */ = {
@@ -386,8 +421,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CBAC2B252C28B900934187 /* ATCWalkthroughViewController.xib in Resources */,
 				528F7FFD24FF4B1700006C6D /* LaunchScreen.storyboard in Resources */,
 				528F802B24FF603F00006C6D /* GoogleService-Info.plist in Resources */,
+				52CBAC29252C28B900934187 /* ATCClassicWalkthroughViewController.xib in Resources */,
 				528F7FFA24FF4B1700006C6D /* Assets.xcassets in Resources */,
 				528F7FF824FF4B1200006C6D /* Main.storyboard in Resources */,
 			);
@@ -524,14 +561,21 @@
 				523F51D62519023C0074CC49 /* LoginController.swift in Sources */,
 				52254A6A250C5FFA00A6683D /* LoginViewModel.swift in Sources */,
 				528F802924FF4F5000006C6D /* Payloads.swift in Sources */,
+				52CBAC39252C29A000934187 /* UIColor.swift in Sources */,
 				528F7FF524FF4B1200006C6D /* ViewController.swift in Sources */,
 				5224D2CD252942AC00B6FE19 /* HomeController.swift in Sources */,
 				528F802D24FF658200006C6D /* AuthService.swift in Sources */,
+				52CBAC2D252C28B900934187 /* WalkthroughController.swift in Sources */,
+				52CBAC2A252C28B900934187 /* ATCWalkthroughViewController.swift in Sources */,
 				52254A67250C532B00A6683D /* RegistrationViewModel.swift in Sources */,
+				52CBAC3B252C29A000934187 /* UIViewController.swift in Sources */,
 				528F7FF124FF4B1200006C6D /* AppDelegate.swift in Sources */,
+				52CBAC32252C293E00934187 /* ATCWalkthroughModel.swift in Sources */,
 				523F51E52519187A0074CC49 /* Extensions.swift in Sources */,
 				528F7FF324FF4B1200006C6D /* SceneDelegate.swift in Sources */,
 				528F803124FF6F5E00006C6D /* Constants.swift in Sources */,
+				52CBAC3A252C29A000934187 /* UIImage.swift in Sources */,
+				52CBAC2C252C28B900934187 /* ATCClassicWalkthroughViewController.swift in Sources */,
 				52254A65250C50D100A6683D /* PayloadsViewModel.swift in Sources */,
 				523F51E0251916590074CC49 /* CustomTextField.swift in Sources */,
 			);
