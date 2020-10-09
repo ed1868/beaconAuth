@@ -67,6 +67,9 @@ class BeaconController: UICollectionViewController, UICollectionViewDelegateFlow
         let acceptAction = UNNotificationAction(identifier: "ACCEPT_ACTION",
               title: "Accept",
               options: UNNotificationActionOptions(rawValue: 0))
+        
+        
+        print("-------------------\(acceptAction)--------------")
         let declineAction = UNNotificationAction(identifier: "DECLINE_ACTION",
               title: "Decline",
               options: UNNotificationActionOptions(rawValue: 0))
