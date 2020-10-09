@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene as! UIWindowScene)
 //        let nav = UINavigationController(rootViewController: HomeController())
         let nav = UINavigationController(rootViewController: WalkthroughController())
+//        let nav = UINavigationController(rootViewController: BeaconController())
         
         window?.rootViewController = nav
         
