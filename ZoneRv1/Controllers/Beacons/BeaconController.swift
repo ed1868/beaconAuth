@@ -35,30 +35,30 @@ class BeaconController: UICollectionViewController, UICollectionViewDelegateFlow
 //          view = webView
 //      }
     
-    func checkIfUserIsLoggedIn(){
-        print("checking if user is logged in ")
-        print("\(String(describing: Auth.auth().currentUser?.uid))")
-        if Auth.auth().currentUser?.uid == nil {
-            print("entro")
-            print("\(String(describing: Auth.auth().currentUser?.uid))")
-            DispatchQueue.main.async {
-                let nav = UINavigationController(rootViewController: LoginController())
-                if #available(iOS 13.0, *) {
-                    nav.isModalInPresentation = true
-                }
-                nav.modalPresentationStyle = .fullScreen
-                self.present(nav, animated: true, completion: nil)
-            }
-            print("DEBUG: USER NOT LOGGED IN...")
-        } else{
-            print("nahhh nahhh")
-        }
-    }
+//    func checkIfUserIsLoggedIn(){
+//        print("checking if user is logged in ")
+//        print("\(String(describing: Auth.auth().currentUser?.uid))")
+//        if Auth.auth().currentUser?.uid == nil {
+//            print("entro")
+//            print("\(String(describing: Auth.auth().currentUser?.uid))")
+//            DispatchQueue.main.async {
+//                let nav = UINavigationController(rootViewController: LoginController())
+//                if #available(iOS 13.0, *) {
+//                    nav.isModalInPresentation = true
+//                }
+//                nav.modalPresentationStyle = .fullScreen
+//                self.present(nav, animated: true, completion: nil)
+//            }
+//            print("DEBUG: USER NOT LOGGED IN...")
+//        } else{
+//            print("nahhh nahhh")
+//        }
+//    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkIfUserIsLoggedIn()
+//        checkIfUserIsLoggedIn()
         
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.delegate = self
@@ -274,7 +274,7 @@ class BeaconController: UICollectionViewController, UICollectionViewDelegateFlow
     }
 }
 
-extension ViewController: UNUserNotificationCenterDelegate {
+extension BeaconController {
 
     // Needs to be implemented to receive notifications both in foreground and background
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {

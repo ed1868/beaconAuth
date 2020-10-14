@@ -8,11 +8,20 @@
 
 import UIKit
 import Firebase
+import WebKit
 import MapKit
+import EstimoteProximitySDK
+import UserNotifications
 
-class HomeController: UIViewController{
+
+
+class HomeController: UIViewController, UNUserNotificationCenterDelegate{
     
     //MARK - PROPERTIES
+    var webView: WKWebView!
+    
+    var proximityObserver: ProximityObserver!
+
     private let mapView = MKMapView()
     private let locationManager = CLLocationManager()
     // MARK - LIFECYCLE
@@ -23,6 +32,31 @@ class HomeController: UIViewController{
         super.viewDidLoad()
         checkIfUserIsLoggedIn()
         enableLocationServices()
+        
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.delegate = self
+        
+        // Define the custom actions.
+        let acceptAction = UNNotificationAction(identifier: "ACCEPT_ACTION",
+              title: "Accept",
+              options: UNNotificationActionOptions(rawValue: 0))
+        
+        
+        print("-------------------\(acceptAction)--------------")
+        let declineAction = UNNotificationAction(identifier: "DECLINE_ACTION",
+              title: "Decline",
+              options: UNNotificationActionOptions(rawValue: 0))
+        // Define the notification type
+        let meetingInviteCategory =
+              UNNotificationCategory(identifier: "MEETING_INVITATION",
+              actions: [acceptAction, declineAction],
+              intentIdentifiers: [],
+              hiddenPreviewsBodyPlaceholder: "",
+              options: .customDismissAction)
+        // Register the notification type.
+        
+        notificationCenter.setNotificationCategories([meetingInviteCategory])
+
 //        signOut()
         
     }
