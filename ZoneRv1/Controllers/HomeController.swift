@@ -27,11 +27,13 @@ class HomeController: UIViewController, UNUserNotificationCenterDelegate{
     // MARK - LIFECYCLE
     
     // MARK - HELPERS
-    
     override func  viewDidLoad() {
         super.viewDidLoad()
         checkIfUserIsLoggedIn()
         enableLocationServices()
+        
+        
+        // MARK - NOTIFICATIONS AND ESTIMOTE SDK IMPLEMENTATION
         
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.delegate = self
@@ -57,10 +59,35 @@ class HomeController: UIViewController, UNUserNotificationCenterDelegate{
         
         notificationCenter.setNotificationCategories([meetingInviteCategory])
 
+        // MARK - ESTIMOTE CODE
+        let estimoteCloudCredentials = CloudCredentials(appID: "multiplenotifications-d31", appToken: "98cc8787bd19cb1e591ab393be5c0a8b")
+
+        proximityObserver = ProximityObserver(credentials: estimoteCloudCredentials, onError: { error in
+            print("ProximityObserver error: \(error)")
+        })
+        
+        print("-------\(proximityObserver)---NIIIGEEH-------")
+        
+        
+        let zone = ProximityZone(tag: "multiplenotifications-d31", range: ProximityRange.near)
+        
+        print("ey youuu----\(zone)")
+        
+        notificationCenter.requestAuthorization(options: [.alert, .sound]) { granted, error in
+            print("notifications permission granted = \(granted), error = \(error?.localizedDescription ?? "(none)")")
+        }
+        
+        zone.onContextChange = { contexts in
+            let content = UNMutableNotificationContent()
+            print("1868-\(content)----")
+        }
+        
+        // END OF USER NOTIFICATIONS AND ESTIMOTE BEACON INTERGRATIION
 //        signOut()
         
     }
-    // MRK - API
+    
+    // MARK - API
     
     func signOut(){
         do {
