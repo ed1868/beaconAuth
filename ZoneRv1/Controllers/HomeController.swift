@@ -69,7 +69,7 @@ class HomeController: UIViewController, UNUserNotificationCenterDelegate{
         print("-------\(proximityObserver)---NIIIGEEH-------")
         
         
-        let zone = ProximityZone(tag: "multiplenotifications-d31", range: ProximityRange.near)
+        let zone = ProximityZone(tag: "multiplenotifications-d31", range: ProximityRange.far)
         
         print("ey youuu----\(zone)")
         
@@ -77,10 +77,24 @@ class HomeController: UIViewController, UNUserNotificationCenterDelegate{
             print("notifications permission granted = \(granted), error = \(error?.localizedDescription ?? "(none)")")
         }
         
-        zone.onContextChange = { contexts in
-            let content = UNMutableNotificationContent()
-            print("1868-\(content)----")
-        }
+//        zone.onContextChange = { contexts in
+//            let content = UNMutableNotificationContent()
+//            print("1868-\(content)----")
+//        }
+        
+        
+                zone.onEnter = { context in
+                
+                    print("ENTROOOOOOOO")
+                    let content = UNMutableNotificationContent()
+                    content.title = "Welcome to Juans Restaurant"
+                    content.body = "We see you are here, someeone will be right with you!"
+        
+                    content.sound = UNNotificationSound.default
+                    let request = UNNotificationRequest(identifier: "enter", content: content, trigger: nil)
+                    notificationCenter.add(request, withCompletionHandler: nil)
+                }
+        proximityObserver.startObserving([zone])
         
         // END OF USER NOTIFICATIONS AND ESTIMOTE BEACON INTERGRATIION
 //        signOut()

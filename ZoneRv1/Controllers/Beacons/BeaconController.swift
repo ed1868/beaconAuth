@@ -218,7 +218,7 @@ class BeaconController: UICollectionViewController, UICollectionViewDelegateFlow
                 }
         
         
-        proximityObserver.startObserving([zone])
+            
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
